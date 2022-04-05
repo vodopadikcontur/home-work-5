@@ -58,7 +58,11 @@ class color
 
     public function mix(color $color)
     {
-        return new color(($this->red + $color->getRed()) / 2, ($this->green + $color->getGreen()) / 2, ($this->blue + $color->getBlue()) / 2);
+        return new color(
+            intval(($this->red + $color->getRed()) / 2),
+            intval(($this->green + $color->getGreen()) / 2),
+            intval(($this->blue + $color->getBlue()) / 2),
+        );
     }
 
     public static function rand(): color
